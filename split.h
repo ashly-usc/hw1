@@ -17,6 +17,7 @@ struct Node
   }
 };
 
+Node* inner(Node* in, Node* node);
 void split(Node*& in, Node*& odds, Node*& evens);
 
 #endif
