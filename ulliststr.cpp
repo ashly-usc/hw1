@@ -108,6 +108,10 @@ void ULListStr::pop_front()
   else if(head_->last - head_->first == 1){
     Item* deleteitem = head_;
     head_ = head_->next;
+    if(size_ == 1){
+      head_ = nullptr;
+      tail_ = nullptr;
+    }
     delete deleteitem;
     size_ = size_ - 1;
   }
