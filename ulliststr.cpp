@@ -135,7 +135,6 @@ std::string* ULListStr::getValAtLoc(size_t loc) const{
   while(curr != nullptr){
     itemsize = curr->last - curr->first;
     if(temploc + 1 <= itemsize){ // found the right item
-      // return &(curr->val[curr->first]);
       return &(curr->val[temploc + curr->first]);
     }
     else{
@@ -143,6 +142,7 @@ std::string* ULListStr::getValAtLoc(size_t loc) const{
       curr = curr->next;
     }
   }
+  return nullptr;
 }
 
 std::string const & ULListStr::back() const{
